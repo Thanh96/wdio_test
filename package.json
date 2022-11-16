@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "wdio": "wdio run wdio.conf.js",
-        "test-e2e-chrome": "wdio ./test/configs/wdio.local.chrome.conf.js",
+        "test-e2e-chrome": "wdio ./features/configs/wdio.local.chrome.conf.js",
         "test-e2e-safari": "wdio ./test/configs/wdio.local.safari.conf.js",
         "test-e2e-firefox": "wdio ./test/configs/wdio.local.firefox.conf.js",
         "test-e2e-iphone12pro": "wdio ./test/configs/wdio.local.iphone12pro.conf.js",
@@ -28,12 +28,13 @@
         "@babel/register": "^7.18.9",
         "@wdio/allure-reporter": "^7.14.1",
         "@wdio/cli": "^7.25.4",
+        "@wdio/cucumber-framework": "^7.25.4",
         "@wdio/jasmine-framework": "^7.25.4",
         "@wdio/local-runner": "^7.25.4",
         "@wdio/reporter": "^7.16.3",
         "@wdio/spec-reporter": "^7.25.4",
         "allure-commandline": "^2.13.8",
-        "chromedriver": "^107.0.3",
+        "chromedriver": "^104.0.0",
         "wdio-chromedriver-service": "^8.0.0",
         "wdio-geckodriver-service": "^2.1.0"
     }

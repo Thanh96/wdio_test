@@ -26,6 +26,7 @@ exports.config = {
         }
       },
     ],
+    services: ['chromedriver'],
     deviceName: 'Desktop',
     before(capabilities, specs) {
       global.specFileName = specs[0];

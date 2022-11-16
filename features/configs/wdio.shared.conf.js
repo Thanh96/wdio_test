@@ -14,23 +14,6 @@ exports.config = {
   // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
   // on a remote machine).
   runner: "local",
-  services: [
-    [
-      "geckodriver",
-      // service options
-      {
-        // OPTIONAL: Arguments passed to geckdriver executable.
-        // Check geckodriver --help for all options. Example:
-        // ['--log=debug', '--binary=/var/ff50/firefox']
-        // Default: empty array
-        args: ["--log=info"],
-
-        // The path where the output of the Geckodriver server should
-        // be stored (uses the config.outputDir by default when not set).
-        // logs: "./logs",
-      },
-    ],
-  ],
   //
   // ==================
   // Specify Test Files
@@ -51,7 +34,9 @@ exports.config = {
   // to run the invest and fundFlow specs before running the admin-investments spec.
   // See note in admin-investments spec.
   // Always add here new specs if available in the specs property below.
-  specs: ["./test/specs/**/*.js"],
+  specs: [
+    './features/**/*.feature'
+  ],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -80,7 +65,7 @@ exports.config = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: "error",
+  logLevel: "info",
 
   // outputDir: path.resolve(__dirname, 'logs'),
   //
@@ -125,7 +110,7 @@ exports.config = {
   //
   // Make sure you have the wdio adapter package for the specific framework installed
   // before running any tests.
-  framework: "jasmine",
+  framework: "cucumber",
   //
   // The number of times to retry the entire specfile when it fails as a whole
   // specFileRetries: 1,
